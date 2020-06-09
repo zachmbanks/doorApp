@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Door App</title>
+
+    <!-- Import the Ionic CSS -->
+    <link
+      href="https://unpkg.com/@ionic/core@latest/css/ionic.bundle.css"
+      rel="stylesheet"
+    />
+    <!-- Import Ionic -->
+    <script src="https://unpkg.com/@ionic/core@latest/dist/ionic.js"></script>
+    <!-- Optional, import the Ionic icons -->
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Calculate panle using inside frame dimentions</ion-card-subtitle>
+      <ion-card-title><h1>Panel Calculator</h1></ion-card-title>
+    </ion-card-header>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+
+          <select id="configSelect" class="form-control"
+            onchange="singleSelectChangeText()">
+            <option value="0">Single</option>
+            <option value="2">Equal Pair</option>
+            <option value="3">Unequal Pair</option>
+          </select>
+        </ion-item>
+
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="panelCalculator">
+            <ion-label color='primary' position='floating'>Inside Frame Width</ion-label>
+          <ion-item>
+            <ion-input id="insideFrameWidth" type="number" value="0"></ion-input>
+          </ion-item>  
+            <ion-label color='primary' position='floating'>Inside Frame Height</ion-label>
+          <ion-item>  
+            <ion-input id="insideFrameHeight" type="number" value="0"></ion-input>
+          </ion-item>
+            <ion-label color='secondary' id="panleSizeDiscription" position='floating'></ion-label>
+          <ion-item >
+            <ion-lable color='warning'  id="panelSize" position='floating' ></ion-lable>
+          </ion-item>
+          
+          
+          <ion-button onclick="calculate()" color="primary">Calculate</ion-button>
+
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  
+    
+      
+    <script src="index.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
